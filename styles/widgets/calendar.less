@@ -1,0 +1,209 @@
+.calendar-picker {
+  padding: 0 1rem 1rem 1rem;
+  margin: 1rem 0 0 0;
+  max-width: 22rem;
+  color: @color-typography-body;
+  border: @one-pixel solid @color-form-border;
+  background-color: @white;
+  font-family: @font-family-light;
+  font-weight: normal;
+  position: relative;
+  box-shadow: @box-shadow;
+  border-radius: @border-radius;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    top: ~"calc(-0.5rem - 1px)";
+    left: 1rem;
+    background-color: @white;
+    border-style: solid;
+    border-color: @color-form-border;
+    border-width: @one-pixel 0 0 @one-pixel;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    transform: rotate(45deg);
+  }
+
+  .date-changer {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-top: 1rem;
+    color: @blue-100;
+
+    div[class$="picker"] {
+      display: flex;
+      justify-content: space-between;
+      z-index: 2;
+
+      button {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border-width: 0;
+
+        &.not-available {
+          cursor: default;
+          outline: none;
+        }
+
+        &.previous {
+          background-image: url("@{image-path}/chevron1left.svg");
+          background-repeat: no-repeat;
+          background-position: 50%;
+          //background-image: url("@{image-path}/calendar-left.svg");
+          //background-size: contain;
+
+          &.not-available {
+            background-image: url("@{image-path}/chevron1leftgrey.svg");
+          }
+        }
+
+        &.next {
+          background-image: url("@{image-path}/chevron1right.svg");
+          background-repeat: no-repeat;
+          background-position: 50%;
+          //background-image: url("@{image-path}/calendar-right.svg");
+          //background-size: contain;
+
+          &.not-available {
+            background-image: url("@{image-path}/chevron1rightgrey.svg");
+          }
+        }
+      }
+    }
+  }
+  table {
+    border-top-width: 0;
+    margin-top: -1.75rem;
+    width: 100%;
+  }
+
+  caption {
+    color: @blue-100;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 1rem;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
+    span {
+      display: block;
+      font-size: @font-size-large;
+    }
+  }
+
+  td,
+  th {
+    text-align: center;
+  }
+
+  th {
+    padding: 0.5rem 0;
+    font-family: @font-family-light;
+    border-width: 0;
+  }
+
+  td {
+    padding: 0;
+    background-color: @white;
+    border: @px1 solid @black-25;
+
+    &:empty {
+      border-width: 0;
+    }
+  }
+
+  tbody {
+    button {
+      color: @blue-100;
+      padding: 0.5rem 0.25rem;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      display: block;
+      vertical-align: text-bottom;
+      border: 0.125rem solid transparent;
+      border-radius: 0;
+      box-sizing: border-box;
+      background-color: transparent;
+      font-family: @font-family-light;
+      font-size: @font-size-medium;
+
+      &:hover {
+        background-color: @light-blue-10;
+      }
+    }
+  }
+
+  .day-invalid {
+    color: @black-50;
+    cursor: default;
+    font-style: italic;
+    background-color: @dark-grey-10;
+
+    &:hover {
+      color: @black-50;
+      cursor: default;
+      background-color: @dark-grey-10;
+    }
+  }
+
+  .day-empty {
+    cursor: default;
+    background-color: @white;
+    border-width: 0;
+  }
+
+  .day-today {
+    color: @white;
+    background-color: @light-blue-75;
+    border-color: @light-blue-75;
+
+    &:hover {
+      color: @blue-100;
+      border-color: @light-blue-10;
+      background-color: @light-blue-10;
+    }
+
+    &.day-invalid {
+      background-color: @dark-grey-10;
+      border-color: @dark-grey-10;
+      color: @black-50;
+
+      &:hover {
+        background-color: @dark-grey-10;
+        border-color: @dark-grey-10;
+      }
+    }
+  }
+
+  .day-selected {
+    color: @white;
+    background-color: @blue-100;
+    border-color: @blue-100;
+
+    &:hover {
+      background-color: @light-blue-100;
+      border-color: @light-blue-100;
+    }
+  }
+
+  .month-picker {
+    width: 55%;
+  }
+
+  .year-picker {
+    width: 45%;
+  }
+}

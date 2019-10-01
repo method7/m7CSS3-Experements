@@ -1,0 +1,20 @@
+label {
+	display: block;
+	font-family: @font-family-default;
+	font-weight: @font-weight-normal;
+	font-size: @font-size-default;
+	padding-bottom: @spacing-medium;
+	color: @blue-100;
+
+	&:empty {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: @step01) {
+
+  label {
+		font-size: @font-size-default-step;
+		padding-bottom: @spacing-medium;
+  }
+}

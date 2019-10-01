@@ -1,0 +1,29 @@
+legend {
+	//display: table; // Hack for IE10 and 11
+	font-family: @font-family-default;
+	font-weight: @font-weight-normal;
+	font-size: @font-size-default;
+    padding-bottom: @spacing-small-plus;
+	color: @blue-100;
+
+	ul, ol {
+		margin: 0 0 1rem 0.5rem;
+		font-size: @font-size-default;
+		li {
+			margin: 0 0 0 1rem;
+			list-style-type: disc;
+		}
+	}
+
+	&:empty {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: @step01) {
+
+	legend {
+		font-size: @font-size-default-step;
+	}
+}
+

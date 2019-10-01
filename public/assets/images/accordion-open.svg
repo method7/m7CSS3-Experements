@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="11px" viewBox="0 0 19 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow_18px_blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Accordion" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Accordion_1440px_Desktop" transform="translate(-402.000000, -196.000000)" stroke="#0073A8">
+            <g id="Accordion_open_static" transform="translate(382.000000, 161.000000)">
+                <g id="open_field_top">
+                    <g id="Arrow_18px_blue" transform="translate(30.000000, 40.500000) rotate(180.000000) translate(-30.000000, -40.500000) translate(20.000000, 35.000000)">
+                        <polyline points="1 1 10.0006061 10 19 1"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

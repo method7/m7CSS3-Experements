@@ -1,0 +1,21 @@
+/* same as visually-hidden in aria.less ?*/
+.off-screen {
+	position: absolute;
+	left: -9999rem;
+}
+
+.back-on-screen {
+	position: static;
+	left: 0;
+}
+
+.clearfix {
+
+	&:after {
+	  content: " ";
+	  visibility: hidden;
+	  display: block;
+	  height: 0;
+	  clear: both;
+	}
+}

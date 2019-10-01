@@ -1,0 +1,144 @@
+.responsive-table {
+
+	display: block;
+
+	colgroup,
+	thead,
+	tbody,
+	tfoot,
+	th,
+	td,
+	tr {
+		display: block;
+	}
+
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr {
+		border: 1px solid @dark-grey-25;
+	}
+
+	tbody th,
+	tbody td:not(:last-of-type) {
+		border: none;
+		border-bottom: 1px solid @dark-grey-25;
+		position: relative;
+		padding-left: 50%;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	tbody td:last-of-type,
+	tfoot td:last-of-type {
+		border: none;
+	}
+
+	tbody th:before,
+	tbody td:before {
+		position: absolute;
+		left: 1rem;
+		width: 45%;
+		padding-right: 0.5rem;
+		word-wrap: break-word;
+		box-sizing: border-box;
+		font-family: @font-family-bold;
+	}
+
+	tbody th:before,
+	tbody td:before {
+		content: attr(data-responsivelabel);
+	}
+}
+
+@media only screen and (min-width: @step01) {
+
+	.responsive-table {
+
+	    &.few-columns {
+			colgroup {
+    			display: table-column-group;
+    		}
+
+    		td,th {
+    			display: table-cell;
+				padding: 1rem 0.75rem;
+
+				&:last-of-type {
+					padding-bottom: 0.75rem;
+				}
+    		}
+	    }
+
+		.responsive-table-align-centre {
+			text-align: center;
+		}
+	}
+}
+
+@media only screen and (min-width: @step02) {
+
+	.responsive-table {
+
+		display: table;
+
+		.responsive-table-align-right {
+			text-align: right;
+		}
+
+		colgroup {
+			display: table-column-group;
+		}
+
+		tr {
+			border: none;
+			display: table-row;
+		}
+
+		thead tr {
+			position: static;
+			top: auto;
+			left: auto;
+		}
+
+		tbody {
+			display: table-row-group;
+		}
+
+		thead {
+			display: table-header-group;
+		}
+
+		tfoot {
+			display: table-footer-group;
+		}
+
+		td,th {
+			display: table-cell;
+		}
+
+		tbody th,
+		tbody td:not(:last-of-type) {
+			position: relative;
+			border-width: 0 @px1 @px1 @px1;
+			border-style: solid;
+			border-color: @dark-grey-25;
+			padding: 1rem;
+		}
+
+		tbody td:last-of-type,
+		tfoot td:last-of-type {
+			border-width: 0 @px1 @px1 @px1;
+			border-style: solid;
+			border-color: @dark-grey-25;
+		}
+
+		tbody th:before,
+		tbody td:before {
+			display: none;
+		}
+	}
+}

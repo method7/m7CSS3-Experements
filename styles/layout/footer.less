@@ -1,0 +1,48 @@
+[role=contentinfo] {
+	text-align: left;
+	margin: 0.5rem 0 1rem 0;
+  	padding: 0.75rem 1rem;
+	font-size: @font-size-xsmall-step;
+	color: @dark-grey-100;
+	clear: both;
+	border-top: @one-pixel solid @dark-grey-10;
+	max-width: @stepMax;
+
+	> div {
+		padding: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: @step01) {
+
+	[role=contentinfo] {
+		font-size: @font-size-xsmall-step;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+
+		> div {
+			margin: 0 auto;
+			padding: 1rem;
+		}
+	}
+}
+
+@media only screen and (min-width: @stepMax) {
+
+	[role=contentinfo] {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* wtf */
+footer {
+  h3 {
+	  font-size: 1.0625rem;
+    li {
+      display: inline-block;
+      padding-right: 1rem;
+    }
+  }
+}
+

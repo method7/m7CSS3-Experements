@@ -1,0 +1,25 @@
+[role=listbox] {
+
+	list-style-type: none;
+	background-color: @white;
+	box-shadow: @box-shadow;
+
+	&:not(:empty) {
+		border: @one-pixel solid @color-form-border;
+		border-bottom-width: 0;
+	}
+
+	&.limit-volume {
+		max-height: 11rem;
+		overflow-y: scroll;
+		border-bottom: solid @px1 @black-75;
+
+		&:empty {
+			display: none;
+		}
+	}
+}
+
+[aria-autocomplete] + input[type=hidden] + [role=listbox] {
+	margin-top: -1px;
+}

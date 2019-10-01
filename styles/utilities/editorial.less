@@ -1,0 +1,123 @@
+.editorial {
+  padding: 0 0.5rem;
+  margin: 1rem 0.5rem;
+
+  ul,
+  ol {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    margin-bottom: 0;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  li {
+    list-style-position: outside;
+    padding-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+}
+
+ol.editorial {
+  li {
+    list-style-type: decimal;
+  }
+  &.list-roman {
+    li {
+      list-style-type: lower-roman;
+    }
+  }
+}
+
+ul.editorial {
+  li {
+    list-style-type: none;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0.3rem;
+      left: -1.1rem;
+      display: inline-block;
+      background-color: @cyan-100;
+      width: 0.35rem;
+      height: 0.35rem;
+      border: 1px solid @cyan-100;
+      border-radius: 50%;
+    }
+  }
+  &.list-circle {
+    li {
+      list-style-type: circle;
+    }
+  }
+
+  &.list-yay,
+  &.list-boo {
+    li {
+      &:before {
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        border-radius: 0;
+        background-color: transparent;
+        border-color: transparent;
+        background-size: cover;
+        width: 1rem;
+        height: 1rem;
+        top: 0;
+        left: -1.5rem;
+      }
+    }
+  }
+  &.list-yay {
+    li {
+      &:before {
+        background-image: url("@{image-path}/accept.svg");
+      }
+    }
+  }
+  &.list-yay.with-color {
+    li {
+      &:before {
+        background-image: url("@{image-path}/tick.svg");
+      }
+    }
+  }
+  &.list-boo {
+    li {
+      &:before {
+        background-image: url("@{image-path}/cancel.svg");
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: @step01) {
+  .editorial {
+    padding: 0 1rem;
+    margin-left: 1rem;
+
+    ul,
+    ol {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      margin-left: 1rem;
+    }
+  }
+
+  .default-font-size {
+    font-size: @font-size-medium-step;
+  }
+
+  .font-size-large {
+    font-size: @font-size-large-step;
+  }
+}
+
+@media only screen and (min-width: @step02) {
+  .editorial {
+    padding: 0 1.25rem;
+  }
+}

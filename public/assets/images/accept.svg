@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-281 411.9 25 25"
+	 enable-background="new -281 411.9 25 25" xml:space="preserve">
+<title>Nav01_Accept_x1</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="Nav01_Accept" sketch:type="MSArtboardGroup">
+		<g id="Imported-Layers" transform="translate(4.000000, 4.000000)" sketch:type="MSLayerGroup">
+			<path id="Fill-1" sketch:type="MSShapeGroup" fill="#0074A6" d="M-272.5,410.4c5.5,0,10,4.5,10,10s-4.5,10-10,10s-10-4.5-10-10
+				S-278,410.4-272.5,410.4 M-272.5,408.4c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S-265.9,408.4-272.5,408.4"/>
+			<path id="Fill-2" sketch:type="MSShapeGroup" fill="#0074A6" d="M-274.1,422.7l-3.8-3.8l-1.4,1.4l5.2,5.2l8.5-8.5l-1.4-1.4
+				L-274.1,422.7"/>
+			<path id="Fill-3" sketch:type="MSShapeGroup" fill="#0074A6" d="M-272.5,408.4c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12
+				S-265.9,408.4-272.5,408.4L-272.5,408.4z M-272.5,430.4c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S-267,430.4-272.5,430.4
+				L-272.5,430.4z"/>
+		</g>
+	</g>
+</g>
+</svg>

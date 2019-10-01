@@ -1,0 +1,21 @@
+.default-font-size {
+  font-size: @font-size-medium;
+}
+
+.font-size-large {
+  font-size: @font-size-large;
+}
+
+.font-light {
+  font-family: @font-family-light;
+}
+
+@media only screen and (min-width: @step01) {
+  .default-font-size {
+    font-size: @font-size-medium-step;
+  }
+
+  .font-size-large {
+    font-size: @font-size-large-step;
+  }
+}

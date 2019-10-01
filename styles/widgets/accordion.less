@@ -1,0 +1,30 @@
+.accordion {
+  margin: 2rem 0;
+  > li {
+    position: relative;
+    padding: 0 1.5rem;
+    border-bottom: @one-pixel solid @dark-grey-25;
+    input {
+      margin-top: 1rem;
+    }
+    button {
+      width: 100%;
+      text-align: center;
+
+      @media only screen and (min-width: @step02) {
+        width: auto;
+        text-align: left;
+        display: inline-block;
+        position: absolute;
+        top: 0.2rem;
+        right: 0.5rem;
+      }
+
+      &[aria-expanded="true"] {
+        color: @blue-100;
+        background: transparent url("@{image-path}/close.png") no-repeat 50% 50%;
+        text-indent: -9999rem;
+      }
+    }
+  }
+}

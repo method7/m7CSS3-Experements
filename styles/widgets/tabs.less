@@ -1,0 +1,138 @@
+.tab-container {
+  padding: 1rem 0 0 0;
+  position: relative;
+}
+
+[role="tablist"] {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: @font-size-medium;
+
+  li {
+    list-style-type: none;
+    border-style: solid;
+    border-color: transparent transparent @dark-grey-25 transparent;
+    border-width: @one-pixel;
+    display: block;
+
+    &:last-child {
+      a {
+        border-width: 0;
+      }
+    }
+
+    a {
+      display: block;
+      line-height: 3.5;
+      text-decoration: none;
+      text-align: left;
+      padding: 0 1.75rem;
+
+      &:hover,
+      &:active {
+        background-color: @white;
+      }
+    }
+
+    &.selected {
+      a {
+        background-color: @white;
+        text-decoration: none;
+      }
+    }
+
+    &.active {
+      a {
+        background-color: #0074a6;
+        color: @white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.tab-content {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  clear: left;
+
+  [role="tabpanel"] {
+    padding: 0.5rem 2rem;
+    border-bottom: solid @px1 @dark-grey-25;
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 61rem) {
+  .tab-container {
+    padding: 0.5rem 0 0 0.5rem;
+    border-style: solid;
+    border-color: transparent transparent @cyan-100 transparent;
+    border-width: @one-pixel;
+  }
+
+  [role="tablist"] {
+    max-width: @stepMax;
+    margin: 0 auto;
+    border-width: @one-pixel;
+
+    li {
+      padding: 0;
+      display: table-cell;
+      border-style: none;
+
+      &:last-child {
+        a {
+          border-style: solid;
+          border-color: @cyan-100;
+          border-width: @one-pixel;
+        }
+      }
+
+      a {
+        margin-left: -@px1;
+        padding: 0 0.4rem;
+        background-color: @dark-grey-5;
+        border-style: solid;
+        border-color: @cyan-100;
+        border-width: @one-pixel;
+        border-top-right-radius: 0.25rem;
+        border-top-left-radius: 0.25rem;
+        line-height: 2.25;
+        text-align: center;
+        margin-bottom: -@px1;
+      }
+
+      &:last-of-type {
+        border-width: @one-pixel;
+      }
+
+      &.selected {
+        a {
+          background-color: @white;
+          text-decoration: none;
+          color: @blue-100;
+          border-color: @cyan-100 @cyan-100 @white @cyan-100;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    margin: 0 -2rem;
+  }
+}
+
+@media only screen and (min-width: @step04) {
+  [role="tablist"] {
+    li {
+      a {
+        padding: 0 1rem;
+      }
+    }
+  }
+}

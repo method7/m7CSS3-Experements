@@ -1,0 +1,19 @@
+h4 {
+  color: @color-typography-title;
+  font-family: @font-family-light;
+  font-weight: normal;
+  margin: 0;
+  padding: @spacing-medium 0 @spacing-medium 0;
+  font-size: @font-size-medium;
+
+  &.boxed {
+    padding: @spacing-xsmall 0 @spacing-medium 0;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (min-width: @step01) {
+  h4 {
+    font-size: @font-size-medium-step;
+  }
+}

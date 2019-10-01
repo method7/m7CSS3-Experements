@@ -1,0 +1,118 @@
+input {
+  display: block;
+  border: @one-pixel solid @color-form-border;
+  border-radius: @border-radius;
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+  color: @black-75;
+  font-size: 1rem; /* Do not change me, I need to be exactly 16px to stop focus zooming on iOS */
+  font-family: @font-family-default;
+  -webkit-appearance: none;
+
+  &:-moz-focusring {
+    outline: 3px solid lightblue;
+  }
+
+  &[type="checkbox"],
+  &[type="radio"] {
+    padding: 0;
+    &:-moz-focusring {
+      outline: 0;
+    }
+  }
+
+  &[type="radio"] {
+    -webkit-appearance: radio;
+  }
+
+  &[type="checkbox"] {
+    -webkit-appearance: checkbox;
+  }
+
+  &[type="search"] {
+    border-radius: @border-radius;
+    padding-right: 0.2rem;
+    box-shadow: none; // FF has a red border without this
+  }
+
+  &[type="file"] {
+    background-color: @white;
+  }
+
+  &[aria-disabled="true"],
+  &[disabled] {
+    background-color: @dark-grey-50;
+    border-color: @dark-grey-50;
+    cursor: not-allowed;
+    opacity: 0.35;
+    color: @dark-grey-100;
+  }
+
+  &[aria-readonly="true"],
+  &[readonly] {
+    background-color: @dark-grey-5;
+    border-color: @dark-grey-5;
+    cursor: not-allowed;
+    color: @dark-grey-100;
+  }
+
+  &[type="date"] {
+    max-width: 9rem;
+    min-height: 2rem; // in for iOS bug
+  }
+
+  &[type="date"]::-webkit-inner-spin-button,
+  &[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+  &[min="1"][max="1"],
+  &[minlength="1"][maxlength="1"] {
+    width: 2.25rem;
+  }
+
+  &[min="2"][max="2"],
+  &[max="99"],
+  &[minlength="2"][maxlength="2"] {
+    width: 3.5rem;
+  }
+
+  &[min][max="100"] {
+    width: 4.5rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+
+  &[min][max="999"],
+  &[maxlength="3"] {
+    width: 4.5rem;
+  }
+
+  &[min][max="9999"],
+  &[maxlength="4"] {
+    width: 5rem;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: @dark-grey-75;
+  font-style: italic;
+}
+
+::-moz-placeholder {
+  color: @dark-grey-75;
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  color: @dark-grey-75;
+  font-style: italic;
+}
+
+@media only screen and (min-width: @step01) {
+  input {
+    font-size: @font-size-medium-step;
+  }
+}

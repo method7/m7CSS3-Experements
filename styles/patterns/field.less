@@ -1,0 +1,68 @@
+.field {
+	border: @one-pixel solid transparent;
+	max-width: @readability-max-width;
+	margin-top: @spacing-medium;
+	padding-top: @spacing-medium;
+	position: relative;
+	box-sizing: border-box;
+
+	&.field-error {
+		background-color: @error-secondary;
+		border-color: @error-secondary;
+		border-width: @one-pixel;
+        border-radius: @border-radius;
+		box-sizing: content-box;
+		margin-left: -@spacing-large;
+		margin-right: -@spacing-large;
+		padding-left: @spacing-large;
+		padding-right: @spacing-large;
+		margin-left: calc(-@spacing-large + @px1);
+		margin-right: calc(-@spacing-large + @px1);
+		padding-left: calc(@spacing-large - @px1);
+		padding-right: calc(@spacing-large - @px1);
+
+		label.multi { /* move to label.less? */
+        	border: @one-pixel solid @error-mid;
+    	}
+	}
+
+	&.boxed {
+	    margin-top: @spacing-medium;
+	}
+
+	&:focus {
+		transform: translateY(2px);
+	}
+
+	&.related:before {
+		content: '';
+		position: absolute;
+		left: -2rem;
+		background-color: @light-blue-25;
+		width: 0.5rem;
+		height: ~"calc(100% + 0.75rem + 2px)";
+	}
+}
+
+.field-readonly {
+	margin: 0.5rem 0;
+}
+
+.max-field-width {
+	max-width: @readability-max-width;
+}
+
+@media only screen and (min-width: @step01) {
+
+  .field {
+	  margin-top: @spacing-medium-step;
+	  padding-top: @spacing-medium-step;
+
+	  &.field-error {
+		  margin-left: -0.5rem;
+		  margin-right: -0.5rem;
+		  padding-left: 0.75rem;
+		  padding-right: 0.75rem;
+	  }
+  }
+};

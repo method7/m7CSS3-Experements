@@ -1,0 +1,39 @@
+[aria-hidden=true] {
+	display: none;
+	visibility: hidden;
+}
+
+[aria-expanded=false] {
+	display: none;
+}
+
+[aria-expanded=true] {
+	display: block;
+}
+
+[aria-invalid] {
+	border-color: @error-primary;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(@one-pixel @one-pixel @one-pixel @one-pixel); /* for Internet Explorer */
+	clip: rect(@one-pixel, @one-pixel, @one-pixel, @one-pixel);
+	padding: 0;
+	border: 0;
+	height: @one-pixel;
+	width: @one-pixel;
+	overflow: hidden;
+}
+
+.skiplink {
+	padding: 0.1rem;
+	display: inline-block;
+	margin: 0.2rem;
+	position: absolute;
+	left: -9999em;
+
+	&:focus {
+		position: static;
+	}
+}

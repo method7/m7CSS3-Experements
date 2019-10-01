@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="13px" height="21px" viewBox="0 0 13 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>Chevron1left</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="256" sketch:type="MSArtboardGroup" transform="translate(-139.000000, -13.000000)" fill="#007EB6">
+            <path d="M149.5,21.3786797 L141.12132,13 L139,15.1213203 L147.37868,23.5 L139.136039,31.7426407 L141.257359,33.863961 L149.5,25.6213203 L149.606602,25.7279221 L151.727922,23.6066017 L151.62132,23.5 L151.863961,23.2573593 L149.742641,21.136039 L149.5,21.3786797 Z" id="Chevron1left" sketch:type="MSShapeGroup" transform="translate(145.431981, 23.431981) rotate(-180.000000) translate(-145.431981, -23.431981) "></path>
+        </g>
+    </g>
+</svg>

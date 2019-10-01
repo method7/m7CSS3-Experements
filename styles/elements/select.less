@@ -1,0 +1,27 @@
+select {
+  display: block;
+  border: @one-pixel solid @color-form-border;
+  border-radius: @border-radius;
+  background-color: @white;
+  width: 100%;
+  box-sizing: border-box;
+  color: @black-75;
+  font-family: @font-family-default;
+  height: 2.25rem;
+  white-space: nowrap;
+  font-size: 1rem; /* Do not change me, I need to be exactly 16px to stop focus zooming on iOS */
+
+  &[aria-disabled="true"],
+  &[disabled] {
+    background-color: @dark-grey-5;
+    border-color: @dark-grey-50;
+    cursor: not-allowed;
+    color: @dark-grey-100;
+  }
+}
+
+@media only screen and (min-width: @step01) {
+  select {
+    font-size: @font-size-default-step;
+  }
+}

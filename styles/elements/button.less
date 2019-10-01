@@ -1,0 +1,231 @@
+[role="button"] {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: @font-family-regular;
+  font-size: @font-size-default;
+  color: @white;
+  background-color: @light-blue-100;
+  border: @one-pixel solid @light-blue-100;
+  margin: 0.25rem 1rem 0.25rem 0;
+  padding: 0.85rem 1.45rem;
+  line-height: 1;
+  box-sizing: border-box;
+  vertical-align: text-bottom;
+  border-radius: @border-radius-button;
+
+  // Change instances of this to a class
+  td & {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &:active {
+    background-color: @light-blue-75;
+    border-color: @light-blue-75;
+  }
+
+  &[aria-disabled="true"],
+  &[disabled] {
+    background-color: @dark-grey-5;
+    border-color: @dark-grey-25;
+    cursor: not-allowed;
+    color: @dark-grey-100;
+
+    &:hover,
+    &:active {
+      background-color: @dark-grey-5;
+      border-color: @dark-grey-25;
+      color: @dark-grey-100;
+      box-shadow: none;
+    }
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+}
+
+.button-secondary {
+  border-color: @dark-grey-100;
+  background-color: @dark-grey-100;
+  color: @white;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+
+  &:hover,
+  &:active {
+    color: @white;
+    border-color: @dark-grey-75;
+    background-color: @dark-grey-75;
+  }
+}
+
+.button-cancel {
+  border-color: @light-blue-100;
+  background-color: @white;
+  color: @light-blue-100;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+
+  &:hover,
+  &:active {
+    color: @blue-100;
+    border-color: @blue-100;
+    background-color: @light-blue-10;
+  }
+}
+
+.button-delete {
+  border-color: @burgundy-100;
+  background-color: @white;
+  color: @dark-grey-100;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+
+  &:hover,
+  &:active {
+    background-color: @burgundy-100;
+    border-color: @burgundy-100;
+    color: @white;
+  }
+
+  &.button-light {
+    color: @burgundy-100;
+    background-image: url("@{image-path}/Remove.svg");
+    &:hover,
+    &:active {
+      color: @burgundy-75;
+    }
+  }
+}
+
+.button-add {
+  border-color: @light-blue-100;
+  background-color: @light-blue-100;
+  color: @white;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+
+  &:hover,
+  &:active {
+    border-color: @light-blue-75;
+    background-color: @light-blue-75;
+    color: @white;
+  }
+
+  &.button-light {
+    color: @light-blue-100;
+    background-image: url("@{image-path}/Add.svg");
+
+    &:hover,
+    &:active {
+      color: @blue-100;
+    }
+  }
+}
+
+.button-light {
+  border-color: transparent;
+  font-family: @font-family-light;
+  background-color: @white;
+  background-repeat: no-repeat;
+  background-size: 0.9rem;
+  background-position: 0.75rem 46%;
+  padding-left: 2.25rem;
+  text-align: left;
+
+  &:hover,
+  &:active {
+    background-color: @white;
+    border-color: transparent;
+    text-decoration: underline;
+  }
+}
+
+.scale-primary {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+.scale-secondary {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.big-lozenge {
+  border-radius: @border-radius-button;
+}
+
+.button-navigate-primary {
+  border-color: @blue-100;
+  background-color: @blue-100;
+  color: @white;
+  min-width: @min-button-width;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  &:hover,
+  &:active {
+    border-color: @light-blue-100;
+    background-color: @light-blue-100;
+    color: @white;
+  }
+}
+
+.button-navigate-secondary {
+  border-color: @blue-100;
+  background-color: @white;
+  color: @blue-100;
+  min-width: @min-button-width;
+
+  &:hover,
+  &:active {
+    border-color: @blue-100;
+    background-color: @blue-100;
+    color: @white;
+  }
+}
+
+.button-close {
+  border: none;
+  background-color: @white;
+  background: url("@{image-path}/icon-delete-grey.svg");
+  content: " ";
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 1.25rem;
+  text-indent: -999rem;
+  overflow: hidden;
+  padding: 0.25rem;
+
+  &:hover,
+  &:active {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+@media only screen and (min-width: @step01) {
+  [role="button"] {
+    font-size: @font-size-default-step;
+    display: inline-block;
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* TODO: This is specific for repeatables - refactor out to there and remove */
+  .button-delete {
+    &.button-light {
+      text-align: right;
+    }
+  }
+}

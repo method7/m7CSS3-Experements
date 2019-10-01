@@ -1,0 +1,43 @@
+body {
+  font-family: @font-family-default;
+  font-size: @font-size-default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: @step00;
+  color: @color-typography-body;
+  border-top: @px6 solid @cyan-100;
+}
+
+p {
+  margin: @spacing-medium 0;
+  line-height: 1.5;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: @step01) {
+  body {
+    font-size: @font-size-default;
+  }
+}
+
+@media only screen and (min-width: @step02) {
+  .column-1 {
+    width: 15rem;
+    float: left;
+    padding-bottom: 2rem;
+    position: sticky;
+    top: 3rem;
+  }
+
+  .column-2 {
+    margin-left: 17.5rem;
+    padding-bottom: 2rem;
+  }
+}

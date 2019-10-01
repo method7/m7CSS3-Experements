@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Calendar_button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Calendar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-856.000000, -339.000000)" id="calendar-1" stroke="#b2b2b2">
+            <g transform="translate(149.000000, 191.000000)">
+                <g id="right" transform="translate(396.500000, 171.500000) scale(1, -1) rotate(90.000000) translate(-396.500000, -171.500000) translate(374.000000, -184.000000)">
+                    <g id="Calendar_button" transform="translate(23.000000, 22.000000) rotate(90.000000) translate(-23.000000, -22.000000) translate(1.000000, 0.000000)">
+                        <circle id="Oval-4" fill="#FFFFFF" fill-rule="evenodd" cx="22" cy="22" r="22"></circle>
+                        <polyline id="Arrow_10px_blue" stroke-linecap="round" transform="translate(22.000000, 22.500000) rotate(90.000000) translate(-22.000000, -22.500000) " points="17 20 22.0003367 25 27 20"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

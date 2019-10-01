@@ -1,0 +1,19 @@
+h3 {
+  color: @color-typography-title;
+  font-family: @font-family-light;
+  font-size: @font-size-large;
+  font-weight: normal;
+  margin: 0;
+  padding: @spacing-large 0 @spacing-medium 0;
+
+  &.boxed {
+    padding: @spacing-xsmall 0 @spacing-medium 0;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (min-width: @step01) {
+  h3 {
+    font-size: @font-size-large-step;
+  }
+}

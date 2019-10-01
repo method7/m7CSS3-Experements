@@ -1,0 +1,28 @@
+h2 {
+  color: @color-typography-title;
+  font-family: @font-family-light;
+  font-size: @font-size-xlarge;
+  font-weight: normal;
+  margin: 0;
+  padding: @spacing-xlarge 0 @spacing-large 0;
+
+  &.boxed {
+    padding: 0 0 1rem 0;
+    line-height: 1.2;
+  }
+
+  &:empty {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: @step01) {
+  h2 {
+    font-size: 1.9rem;
+
+    &.boxed {
+      padding: 0 0 1rem 0;
+      line-height: 1.2;
+    }
+  }
+}

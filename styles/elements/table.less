@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-top: 0.4375rem solid @light-blue-100;
+  font-size: @font-size-medium;
+}
+
+.zebra tbody tr:nth-child(odd),
+tr.zebra td {
+  background-color: @dark-grey-10;
+}
+
+.small-screen-zebra tbody tr:nth-child(odd),
+tr.small-screen-zebra td {
+  background-color: @dark-grey-10;
+}
+
+@media only screen and (min-width: @step02) {
+  table {
+    font-size: @font-size-medium-step;
+  }
+
+  .small-screen-zebra tbody tr:nth-child(odd),
+  tr.small-screen-zebra td {
+    background-color: transparent;
+  }
+}

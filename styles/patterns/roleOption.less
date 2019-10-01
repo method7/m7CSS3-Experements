@@ -1,0 +1,51 @@
+[role=option] {
+	border-bottom: @px1 solid @color-form-border;
+	list-style-type: none;
+
+	a {
+		display: block;
+		color: @blue-100;
+		text-decoration: none;
+		padding: 0.5rem;
+
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+			background-color: @light-blue-10;
+		}
+
+		&[aria-selected=true] {
+			text-decoration: none;
+			color: @white;
+			background-color: @blue-100;
+
+			th,td{
+				color: @white;
+			}
+		}
+
+		tr {
+			background-color: transparent;
+			th, td{
+				padding: 0;
+				color: @blue-100;
+				border: none;
+				font-weight: normal;
+			}
+		}
+	}
+
+	&.no-results {
+		a {
+			color: @dark-grey-100;
+			cursor: default;
+			&:hover,
+			&:active {
+				text-decoration: none;
+				color: @dark-grey-100;
+				background-color: @white;
+			}
+		}
+	}
+}
