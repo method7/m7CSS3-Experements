@@ -34,19 +34,10 @@ class Main extends Component {
       story: clicked,
       closeNav: true
     });
-    // this.setNavState();
   };
 
   setNavState = () => {
     this.setState({ navActive: !this.state.navActive, closeNav: false });
-  };
-
-  setCardState = id => {
-    const x = this.state.stories[id];
-    x["open"] = !x["open"];
-    this.setState({
-      stories: this.state.stories
-    });
   };
 
   render() {

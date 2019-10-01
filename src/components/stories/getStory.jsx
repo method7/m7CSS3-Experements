@@ -19,9 +19,9 @@ class GetStory extends Component {
       readStory,
       navActive,
       closeNav,
-      setNavState,
-      setCardState
+      setNavState
     } = this.props;
+
     const divStyle = {
       width: activeView.width
     };
@@ -33,26 +33,17 @@ class GetStory extends Component {
       return [...acc, element];
     }, []);
 
-    const getCssClass = (sortedArr, index, open) => {
-      console.log(open);
+    const getCssClass = (sortedArr, index) => {
       return concatClassName(
         "story-card-inner story-card-" +
           sortedArr.findIndex(x => x.id === index),
-        navActive ? "hide" : "",
-        open ? "flip" : ""
+        navActive ? "hide" : ""
       );
     };
 
     const GetTagName = id => {
       var TagName = this.components[id];
-      return (
-        <TagName
-          navActive={navActive}
-          setNavState={setNavState}
-          setCardState={setCardState}
-          id={id}
-        />
-      );
+      return <TagName />;
     };
 
     const transitionEnd = () => {
@@ -68,7 +59,7 @@ class GetStory extends Component {
           <div
             id={"story-" + story.id}
             key={story.id}
-            className={getCssClass(sortedArr, index, story.open)}
+            className={getCssClass(sortedArr, index)}
             onTransitionEnd={transitionEnd}
           >
             {GetTagName(story.id)}
@@ -85,8 +76,7 @@ GetStory.propTypes = {
   stories: PropTypes.array.isRequired,
   readStory: PropTypes.string.isRequired,
   closeNav: PropTypes.bool.isRequired,
-  setNavState: PropTypes.func.isRequired,
-  setCardState: PropTypes.func.isRequired
+  setNavState: PropTypes.func.isRequired
 };
 
 export default GetStory;
