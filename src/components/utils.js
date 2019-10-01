@@ -7,6 +7,10 @@ export function myStories() {
   ];
 }
 
-export function concatClassName(a, b, c) {
-  return a + " " + b + " " + c;
+export function concatString(obj) {
+  let string = "";
+  obj.map(function(cssClass) {
+    string += cssClass + " ";
+  });
+  return string.trim();
 }

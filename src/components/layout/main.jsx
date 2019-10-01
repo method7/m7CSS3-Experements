@@ -13,7 +13,7 @@ class Main extends Component {
       story: "/",
       stories: util.myStories(),
       navActive: false,
-      closeNav: false
+      allowNavToClose: false
     };
   }
 
@@ -29,26 +29,26 @@ class Main extends Component {
     }
   }
 
-  navigate = clicked => {
+  onNavigate = clicked => {
     this.setState({
       story: clicked,
-      closeNav: true
+      allowNavToClose: true
     });
   };
 
-  setNavState = () => {
-    this.setState({ navActive: !this.state.navActive, closeNav: false });
+  toggleNav = () => {
+    this.setState({ navActive: !this.state.navActive, allowNavToClose: false });
   };
 
   render() {
-    const { setModalState, activeView } = this.props;
+    const { setModalState, viewPort } = this.props;
     return (
       <Router>
         <div role="main" className="page" id="page">
           <button
             className="toggleNav"
             onClick={() => {
-              this.setNavState();
+              this.toggleNav();
               return false;
             }}
           >
@@ -59,24 +59,22 @@ class Main extends Component {
               <Navigation
                 readStory={this.state.story}
                 stories={this.state.stories}
-                onNavigate={this.navigate}
+                onNavigate={this.onNavigate}
                 setModalState={setModalState}
                 navActive={this.state.navActive}
-                activeView={activeView}
-                setNavState={this.setNavState}
+                viewPort={viewPort}
               />
             </div>
 
             <GetStory
-              activeView={activeView}
+              viewPort={viewPort}
               setModalState={setModalState}
-              setNavState={this.setNavState}
-              setCardState={this.setCardState}
-              onNavigate={this.navigate}
+              toggleNav={this.toggleNav}
+              onNavigate={this.onNavigate}
               readStory={this.state.story}
               stories={this.state.stories}
               navActive={this.state.navActive}
-              closeNav={this.state.closeNav}
+              allowNavToClose={this.state.allowNavToClose}
             />
           </section>
         </div>
@@ -87,6 +85,6 @@ class Main extends Component {
 
 Main.propTypes = {
   setModalState: PropTypes.func.isRequired,
-  activeView: PropTypes.object.isRequired
+  viewPort: PropTypes.object.isRequired
 };
 export default Main;

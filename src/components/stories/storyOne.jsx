@@ -4,11 +4,16 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="story-card">
-          <h1>Story One</h1>
-          <p>Architect & Engineer</p>
-          <p>We love that guy</p>
-        </div>
+        <h1>Story One</h1>
+        <p>
+          Aliquam maximus erat eros, sed viverra nulla interdum nec. Fusce nec
+          vulputate mauris. Sed lacinia varius feugiat. Etiam nisl elit,
+          pharetra vel urna et, finibus finibus neque. Maecenas mattis aliquam
+          urna id aliquam. Quisque in luctus ante. Nulla facilisi. In tempor,
+          ligula non consequat efficitur, orci arcu feugiat augue, nec dignissim
+          ligula orci sit amet eros. Aliquam sagittis rhoncus feugiat. Praesent
+          vel elit vel nulla mattis finibus.
+        </p>
       </React.Fragment>
     );
   }

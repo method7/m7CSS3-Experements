@@ -10,11 +10,11 @@ class Navigation extends Component {
       readStory,
       setModalState,
       navActive,
-      activeView
+      viewPort
     } = this.props;
 
     const divStyle = {
-      height: activeView.height
+      height: viewPort.height
     };
 
     return (
@@ -77,7 +77,7 @@ Navigation.propTypes = {
   readStory: PropTypes.string.isRequired,
   setModalState: PropTypes.func.isRequired,
   navActive: PropTypes.bool.isRequired,
-  activeView: PropTypes.object.isRequired
+  viewPort: PropTypes.object.isRequired
 };
 
 export default Navigation;

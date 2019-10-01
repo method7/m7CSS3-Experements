@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Home, StoryOne, StoryTwo, StoryThree } from ".";
 import PropTypes from "prop-types";
 
-import { concatClassName } from "../utils";
+import { concatString } from "../utils";
 
 class GetStory extends Component {
   components = {
@@ -14,16 +14,16 @@ class GetStory extends Component {
 
   render() {
     const {
-      activeView,
+      viewPort,
       stories,
       readStory,
       navActive,
-      closeNav,
-      setNavState
+      allowNavToClose,
+      toggleNav
     } = this.props;
 
     const divStyle = {
-      width: activeView.width
+      width: viewPort.width
     };
 
     const sortedArr = stories.reduce((acc, element) => {
@@ -34,11 +34,11 @@ class GetStory extends Component {
     }, []);
 
     const getCssClass = (sortedArr, index) => {
-      return concatClassName(
+      return concatString([
         "story-card-inner story-card-" +
           sortedArr.findIndex(x => x.id === index),
         navActive ? "hide" : ""
-      );
+      ]);
     };
 
     const GetTagName = id => {
@@ -47,10 +47,9 @@ class GetStory extends Component {
     };
 
     const transitionEnd = () => {
-      if (closeNav) {
-        setNavState();
+      if (allowNavToClose) {
+        toggleNav();
       }
-      // console.log("transitionEnd", readStory, navActive);
     };
 
     return (
@@ -72,11 +71,11 @@ class GetStory extends Component {
 
 GetStory.propTypes = {
   navActive: PropTypes.bool.isRequired,
-  activeView: PropTypes.object.isRequired,
+  viewPort: PropTypes.object.isRequired,
   stories: PropTypes.array.isRequired,
   readStory: PropTypes.string.isRequired,
-  closeNav: PropTypes.bool.isRequired,
-  setNavState: PropTypes.func.isRequired
+  allowNavToClose: PropTypes.bool.isRequired,
+  toggleNav: PropTypes.func.isRequired
 };
 
 export default GetStory;

@@ -9,7 +9,7 @@ class App extends Component {
 
     this.state = {
       modalActive: false,
-      activeView: { width: 0, height: 0 }
+      viewPort: { width: 0, height: 0 }
     };
   }
 
@@ -26,10 +26,9 @@ class App extends Component {
     return (
       <React.Fragment>
         <Main
-          onNavigate={this.navigate}
           setModalState={this.setModalState}
           navActive={this.state.navActive}
-          activeView={this.state.activeView}
+          viewPort={this.state.viewPort}
         />
         <Modal
           setModalState={this.setModalState}
@@ -37,8 +36,8 @@ class App extends Component {
           Content={this.state.modalContent}
         />
         <span>
-          Window size: {this.state.activeView.width} x{" "}
-          {this.state.activeView.height}
+          Window size: {this.state.viewPort.width} x{" "}
+          {this.state.viewPort.height}
         </span>
       </React.Fragment>
     );
@@ -51,7 +50,7 @@ class App extends Component {
 
   setDimensions = () => {
     this.setState({
-      activeView: {
+      viewPort: {
         width: document.getElementById("page").offsetWidth,
         height: document.getElementById("page").offsetHeight
       }
