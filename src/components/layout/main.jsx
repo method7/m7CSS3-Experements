@@ -30,10 +30,14 @@ class Main extends Component {
   }
 
   onNavigate = clicked => {
-    this.setState({
-      story: clicked,
-      allowNavToClose: true
-    });
+    if (clicked !== this.state.story) {
+      this.setState({
+        story: clicked,
+        allowNavToClose: true
+      });
+    } else {
+      this.toggleNav();
+    }
   };
 
   toggleNav = () => {
