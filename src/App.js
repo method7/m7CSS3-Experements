@@ -35,10 +35,6 @@ class App extends Component {
           modalActive={this.state.modalActive}
           Content={this.state.modalContent}
         />
-        <span>
-          Window size: {this.state.viewPort.width} x{" "}
-          {this.state.viewPort.height}
-        </span>
       </React.Fragment>
     );
   }
@@ -51,8 +47,8 @@ class App extends Component {
   setDimensions = () => {
     this.setState({
       viewPort: {
-        width: document.getElementById("page").offsetWidth,
-        height: document.getElementById("page").offsetHeight
+        width: Math.max(document.documentElement.clientWidth),
+        height: Math.max(document.documentElement.clientHeight)
       }
     });
   };

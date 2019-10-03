@@ -23,7 +23,8 @@ class GetStory extends Component {
     } = this.props;
 
     const divStyle = {
-      width: viewPort.width
+      width: viewPort.width,
+      height: viewPort.height
     };
 
     const sortedArr = stories.reduce((acc, element) => {

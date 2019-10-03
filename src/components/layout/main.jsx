@@ -48,40 +48,43 @@ class Main extends Component {
     const { setModalState, viewPort } = this.props;
     return (
       <Router>
-        <div role="main" className="page" id="page">
-          <button
-            className="toggleNav"
-            onClick={() => {
-              this.toggleNav();
-              return false;
-            }}
-          >
-            {this.state.navActive ? "close Navigation" : "open Navigation"}
-          </button>
-          <section>
-            <div className={this.state.navActive ? "nav" : "nav hide"}>
-              <Navigation
-                readStory={this.state.story}
-                stories={this.state.stories}
-                onNavigate={this.onNavigate}
-                setModalState={setModalState}
-                navActive={this.state.navActive}
-                viewPort={viewPort}
-              />
-            </div>
-
-            <GetStory
-              viewPort={viewPort}
-              setModalState={setModalState}
-              toggleNav={this.toggleNav}
-              onNavigate={this.onNavigate}
+        <button
+          className="toggleNav"
+          onClick={() => {
+            this.toggleNav();
+            return false;
+          }}
+        >
+          {this.state.navActive ? "close Navigation" : "open Navigation"}
+        </button>
+        <section>
+          <div className={this.state.navActive ? "nav" : "nav hide"}>
+            <Navigation
               readStory={this.state.story}
               stories={this.state.stories}
+              onNavigate={this.onNavigate}
+              setModalState={setModalState}
               navActive={this.state.navActive}
-              allowNavToClose={this.state.allowNavToClose}
+              viewPort={viewPort}
             />
-          </section>
-        </div>
+          </div>
+
+          <GetStory
+            viewPort={viewPort}
+            setModalState={setModalState}
+            toggleNav={this.toggleNav}
+            onNavigate={this.onNavigate}
+            readStory={this.state.story}
+            stories={this.state.stories}
+            navActive={this.state.navActive}
+            allowNavToClose={this.state.allowNavToClose}
+          />
+        </section>
+        <span
+          style={{ position: "absolute", display: "block", top: 10, left: 10 }}
+        >
+          Window size: {viewPort.width} x {viewPort.height}
+        </span>
       </Router>
     );
   }
