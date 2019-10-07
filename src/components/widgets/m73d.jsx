@@ -31,7 +31,6 @@ class M73d extends Component {
           "px black";
   };
   backgroundPositionCss = mouse => {
-    console.log(typeof mouse.x, mouse.x === 0 || mouse.y === 0);
     return mouse.x === 0 || mouse.y === 0
       ? "-307px -240px"
       : mouse.x - 600 + "px " + (mouse.y - 450) + "px";
