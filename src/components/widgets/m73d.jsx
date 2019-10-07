@@ -6,21 +6,21 @@ const styles = {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  minHeight: "100vh",
   color: "white"
 };
 
 class M73d extends Component {
   boxShadowCss = mouse => {
     var xm = mouse.x - 300;
-    var ym = mouse.y - 175;
+    var ym = mouse.y - 170;
     return mouse.x === 0 || mouse.y === 0
       ? "black 0px -35px 37px"
       : "0 " + -ym + "px " + (this.shadowDepth(xm, ym) + 30) + "px black";
   };
-  textShadowCss = mouse => {
+  textShadowCss = (mouse, viewPort) => {
     var xm = mouse.x - 300;
     var ym = mouse.y - 175;
+
     return mouse.x === 0 || mouse.y === 0
       ? "black 7px -35px 17px"
       : -xm +
@@ -32,8 +32,8 @@ class M73d extends Component {
   };
   backgroundPositionCss = mouse => {
     return mouse.x === 0 || mouse.y === 0
-      ? "-307px -240px"
-      : mouse.x - 600 + "px " + (mouse.y - 450) + "px";
+      ? "-250px -200px"
+      : mouse.x - 550 + "px " + (mouse.y - 380) + "px";
   };
 
   shadowDepth = (xm, ym) => {
@@ -49,7 +49,10 @@ class M73d extends Component {
             id="tsb-box"
             style={{ boxShadow: this.boxShadowCss(mouse) }}
           ></div>
-          <p id="tsb-text" style={{ textShadow: this.textShadowCss(mouse) }}>
+          <p
+            id="tsb-text"
+            style={{ textShadow: this.textShadowCss(mouse, viewPort) }}
+          >
             method7.co.uk
           </p>
           <div>
@@ -62,7 +65,9 @@ class M73d extends Component {
         </div>
         <div
           id="tsb-spot"
-          style={{ backgroundPosition: this.backgroundPositionCss(mouse) }}
+          style={{
+            backgroundPosition: this.backgroundPositionCss(mouse, viewPort)
+          }}
         ></div>
       </div>
     );
