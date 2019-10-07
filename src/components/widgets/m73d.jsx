@@ -11,39 +11,6 @@ const styles = {
 };
 
 class M73d extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      tsbBoxCss: {
-        boxShadow: ""
-      },
-      tsbTextCss: {
-        textShadow: ""
-      },
-      tsbSpotCss: {
-        backgroundPosition: ""
-      }
-    };
-  }
-
-  componentDidMount() {
-    this.setDefaults();
-  }
-
-  setDefaults = () => {
-    this.setState({
-      tsbBoxCss: {
-        boxShadow: "black 0px -35px 37px"
-      },
-      tsbTextCss: {
-        textShadow: "black 7px -35px 17px"
-      },
-      tsbSpotCss: {
-        backgroundPosition: "-307px -240px"
-      }
-    });
-  };
-
   boxShadowCss = mouse => {
     var xm = mouse.x - 300;
     var ym = mouse.y - 175;
@@ -51,7 +18,6 @@ class M73d extends Component {
       ? "black 0px -35px 37px"
       : "0 " + -ym + "px " + (this.shadowDepth(xm, ym) + 30) + "px black";
   };
-
   textShadowCss = mouse => {
     var xm = mouse.x - 300;
     var ym = mouse.y - 175;
@@ -64,7 +30,6 @@ class M73d extends Component {
           (this.shadowDepth(xm, ym) + 10) +
           "px black";
   };
-
   backgroundPositionCss = mouse => {
     console.log(typeof mouse.x, mouse.x === 0 || mouse.y === 0);
     return mouse.x === 0 || mouse.y === 0
@@ -78,7 +43,6 @@ class M73d extends Component {
 
   render() {
     const { viewPort, mouse } = this.props;
-    console.log("M73d:mouse ", this.textShadowCss(mouse));
     return (
       <div id="text-shadow-box" style={styles}>
         <div className="wall">
