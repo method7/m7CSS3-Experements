@@ -1,16 +1,19 @@
 import React, { Component } from "react";
-import MouseCapture from "./components/widgets/mouseCapture";
+import M73d from "./components/widgets/m73d";
+import windowDimensions from "./components/hocs/windowDimensions";
+import mouseCapture from "./components/hocs/mouseCapture";
 
 import "../styles/App.less";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <React.Fragment>
-        <MouseCapture></MouseCapture>
-      </React.Fragment>
+      <M73d viewPort={this.props.viewPort} mouse={this.props.mouse}></M73d>
     );
   }
 }
 
-export default App;
+export default mouseCapture(windowDimensions(App));
